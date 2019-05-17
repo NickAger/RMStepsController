@@ -334,10 +334,9 @@
 
 - (UIButton *)cancelButton {
     if(!_cancelButton) {
-        self.cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_cancelButton setTitle:@"X" forState:UIControlStateNormal];
+        self.cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_cancelButton setTitle:@"Abort" forState:UIControlStateNormal];
         _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
-        [_cancelButton setTitleColor:[UIColor colorWithWhite:142./255. alpha:0.5] forState:UIControlStateNormal];
         
         [_cancelButton addTarget:self action:@selector(cancelButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
